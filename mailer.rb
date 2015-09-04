@@ -1,7 +1,3 @@
-require 'sinatra'
-require 'mail'
-#require "./mailer.rb"
-
 def mailer
 	puts "MAILER SAYS"
 	puts @email
@@ -33,30 +29,3 @@ def mailer
 
 	mail.deliver
 end
-
-get "/" do 
-	erb :home
-end
-
-get "/info" do
-	erb :info
-end
-
-post "/preorder" do
-	preorder
-
-end
-
-post "/mailer" do
-	# puts "mailer got"
-	# puts params.inspect
-	@text=params[:text]
-	@email=params[:email]
-	# erb :mail
-	mailer
-end
-
-get "/contact" do
-	erb :contact
-end
-
