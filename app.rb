@@ -10,7 +10,7 @@ def mailer_proc
 	options = { :address              => "mail.classwork.mike-lucek.com",
 	            :port                 => 587,
 	            :user_name            => 'test@classwork.mike-lucek.com',
-	            :password             => 'tung99tung99',
+	            :password             => 'fake password',
 	            :authentication       => 'plain',
 	            :enable_starttls_auto => false  }
 
@@ -24,7 +24,7 @@ def mailer_proc
 
 	mail = Mail.new do
 	  from    'test@classwork.mike-lucek.com'
-	  to      'michael.s.lucek@gmail.com'
+	  to      'FAKE@gmail.com'
 	  subject email
 	  body    text
 	end
