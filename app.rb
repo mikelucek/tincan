@@ -2,7 +2,7 @@ require 'sinatra'
 require 'mail'
 #require "./mailer.rb"
 
-def mailer
+def mailer_proc
 	puts "MAILER SAYS"
 	puts @email
 	puts @text
@@ -19,13 +19,13 @@ def mailer
 	  delivery_method :smtp, options
 	end
 
-	email = @email
+	email = "email inquiry from " + @email
 	text = @text
 
 	mail = Mail.new do
-	  from    email
+	  from    'test@classwork.mike-lucek.com'
 	  to      'michael.s.lucek@gmail.com'
-	  subject 'TinCan Contact form'
+	  subject email
 	  body    text
 	end
 
@@ -43,7 +43,7 @@ get "/info" do
 end
 
 post "/preorder" do
-	preorder
+	erb :preorder
 
 end
 
@@ -53,7 +53,7 @@ post "/mailer" do
 	@text=params[:text]
 	@email=params[:email]
 	# erb :mail
-	mailer
+	mailer_proc
 end
 
 get "/contact" do
