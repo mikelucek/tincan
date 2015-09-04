@@ -37,7 +37,7 @@ body {
 .circle a {
   text-decoration: none;
   color: rgb(160, 40, 60);
-  font-size: 1.3em;
+  font-size: 1.4em;
   display: block;
   height: 40px;
   width: 40px;
@@ -65,12 +65,26 @@ body {
   width: 60px;
   line-height: 40px;
   padding: 10px;
-  background: rgb(160, 40, 60);
+  background: rgba(160, 40, 60);
   border: 3px solid black;
+  background: url('logo_small.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .menu-button:hover {
-  background-color: white;
+  background-color: rgba(160, 40, 60, .3);
+}
+
+#title {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-color: ;
+}
+
+#title h1 {
+  font-size: 4em;
 }
 
 video {
