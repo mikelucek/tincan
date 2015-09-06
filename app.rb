@@ -42,7 +42,7 @@ get "/info" do
 	erb :info
 end
 
-post "/preorder" do
+get "/preorder" do
 	erb :preorder
 
 end
