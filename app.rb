@@ -35,7 +35,7 @@ def mailer_proc
 end
 
 get "/" do 
-	erb :home
+	erb :home, :layout => false
 end
 
 get "/info" do

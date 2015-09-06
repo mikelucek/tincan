@@ -93,3 +93,14 @@ img {
   left: 0;
   z-index: -1;
 }
+
+#content{
+  display: block;
+  background-color: rgba(200,200,200,0.4);
+  width: 496px;
+  height: 100%;
+  margin:0px 60px;
+  padding: 240px 24px 12px 24px;
+  float: right;
+  font-size: 24px;
+}
