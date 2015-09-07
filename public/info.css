@@ -113,3 +113,26 @@ video {
   float: right;
   font-size: 24px;
 }
+
+/*Form styling*/
+
+input, textarea {
+  border-radius: 4px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 12px 0px;
+  font-size: 24px;
+  color: grey;
+  padding: 4px;
+  opacity: 0.6;
+}
+
+/*background color need to override weird button behaviour on osx*/
+input[type="submit"]{
+  background-color: white;
+}
+input[type="submit"]:hover{
+ background-color: rgba(160, 40, 60, .3);
+ color: black;
+}
