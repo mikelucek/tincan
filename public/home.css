@@ -78,13 +78,22 @@ body {
 
 #title {
   width: 600px;
+  position: relative;
   margin: 0 auto;
   text-align: center;
-  font-color: ;
+  top: 220px;
 }
 
 #title h1 {
-  font-size: 4em;
+  font-size: 5em;
+  color: rgb(160, 40, 60);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#title h2 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 video {
@@ -92,4 +101,5 @@ video {
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
 }
