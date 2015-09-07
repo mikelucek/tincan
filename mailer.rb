@@ -1,27 +1,36 @@
-def mailer
+
+def mailer_proc
+
 	puts "MAILER SAYS"
 	puts @email
 	puts @text
+	@mail_to = ENV['EMAIL']
 
 	options = { :address              => "mail.classwork.mike-lucek.com",
 	            :port                 => 587,
 	            :user_name            => 'test@classwork.mike-lucek.com',
-	            :password             => 'tung99tung99',
+	            :password             => "FAKE",
 	            :authentication       => 'plain',
 	            :enable_starttls_auto => false  }
+	options[:password] = ENV["PASSWORD"]
 
 
 	Mail.defaults do
 	  delivery_method :smtp, options
 	end
 
-	email = @email
-	text = @text
+	email = "email inquiry from " + @email
+	if @text.nil?
+		text = "Sign me up for preordering"
+	else
+		text = @text
+	end
 
+	mailto = @mail_to
 	mail = Mail.new do
-	  from    email
-	  to      'michael.s.lucek@gmail.com'
-	  subject 'TinCan Contact form'
+	  from    'test@classwork.mike-lucek.com'
+	  to      mailto
+	  subject email
 	  body    text
 	end
 
