@@ -9,11 +9,9 @@ def mailer_proc
 	options = { :address              => "mail.classwork.mike-lucek.com",
 	            :port                 => 587,
 	            :user_name            => 'test@classwork.mike-lucek.com',
-	            :password             => "FAKE",
+	            :password             => ENV["PASSWORD"],
 	            :authentication       => 'plain',
 	            :enable_starttls_auto => false  }
-	options[:password] = ENV["PASSWORD"]
-
 
 	Mail.defaults do
 	  delivery_method :smtp, options
